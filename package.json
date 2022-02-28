@@ -1,0 +1,31 @@
+{
+  "name": "kaiwu_3d",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build",
+    "serve": "vite preview"
+  },
+  "dependencies": {
+    "FileSaver": "0.10.0",
+    "axios": "0.25.0",
+    "blob": "^0.1.0",
+    "file-saver": "^2.0.5",
+    "postprocessing": "^6.23.2",
+    "sass": "^1.43.4",
+    "sass-loader": "^12.3.0",
+    "three": "0.136.0",
+    "vue": "^3.2.16",
+    "vue-i18n": "9.2.0-beta.18",
+    "vue-router": "4.0.12",
+    "webpack": "^5.64.1"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.5",
+    "@types/three": "^0.134.0",
+    "@vitejs/plugin-vue": "^1.9.3",
+    "typescript": "^4.4.3",
+    "vite": "^2.6.4",
+    "vue-tsc": "^0.3.0"
+  }
+}

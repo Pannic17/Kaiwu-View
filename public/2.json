@@ -1,0 +1,88 @@
+{
+    "modelPath": "/model/owl_gltf/1.gltf",
+    "hdrPath": "/hdr/xmas.hdr",
+    "bgPath": null,
+    "rotation": 38.52,
+    "hdrAngle": 0,
+    "autoPlay": false,
+    "ambientIntensity": 0.2,
+    "hdrExposure": 1,
+    "enablePostprocessing": true,
+    "toneMapping": "ACESFilmic",
+    "maps": {
+        "arm": null,
+        "env": null
+    },
+    "postprocessing": {
+        "enable": {
+            "BLOOM": false,
+            "SSR": true,
+            "SSAO": true,
+            "FXAA": false,
+            "SMAA": false,
+            "SSAA": true,
+            "SHARP": true
+        },
+        "SSAA": {
+            "sampleLevel": 3,
+            "unbiased": true
+        },
+        "BLOOM": {
+            "strength": 1.5,
+            "radius": 4,
+            "threshold": 1
+        },
+        "SSAO": {
+            "output": 0,
+            "kernelRadius": 0.75,
+            "minDistance": 0.00001,
+            "maxDistance": 0.001,
+            "contrast": 1
+        },
+        "SSR": {
+            "output": 0,
+            "thickness": 0.1,
+            "maxDistance": 3,
+            "opacity": 1,
+            "surfDist": 0.001
+        },
+        "SHARP": {
+            "intensity": 0.05
+        }
+    },
+    "camera": {
+        "position": {
+            "x": -3.961387339620879,
+            "y": 2.771810900656674,
+            "z": -13.831451188307106
+        },
+        "rotation": {
+            "x": -2.8420386636826076,
+            "y": -0.26711089640663915,
+            "z": -3.0602534481665025
+        },
+        "lookAt": {
+            "x": 0,
+            "y": -1.5,
+            "z": 0
+        },
+        "focalLength": 44.99999999999999
+    },
+    "lights": [
+        {
+            "type": 2,
+            "intensity": 1,
+            "color": 65535,
+            "rotate": {
+                "r": 20,
+                "a": 90,
+                "h": 15
+            },
+            "shadow": {
+                "radius": 4,
+                "blurSamples": 8
+            },
+            "enable": true
+        }
+    ]
+}
