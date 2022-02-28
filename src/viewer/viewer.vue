@@ -279,8 +279,17 @@ body{
 }
 
 .button{
-    position: absolute;;
-    bottom: 0;
+    position: absolute;
+    width: 40vw;
+    left: 30vw;
+    display: inline-flex;
+    justify-content: space-around;
+    align-content: space-around;
+    bottom: 10vw;
     z-index: 5;
+    button{
+        margin: 10px;
+        font-size: 20px;
+    }
 }
 </style>
