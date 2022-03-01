@@ -279,16 +279,8 @@ class ThreeHelper {
         let viewGUI = new GUI();
         let original = parameters.camera;
         let button = {
-            'reset': resetObject,
+            'reset': _this.resetObject,
             'rotation': parameters.rotation
-        }
-
-        function resetObject() {
-            parameters.rotation = button.rotation;
-            _this.object.rotation.y = (button.rotation + 180) * Math.PI / 180;
-            camera.position.set( original.position.x, original.position.y, original.position.z );
-            camera.rotation.set( original.rotation.x, original.rotation.y, original.rotation.z )
-            camera.lookAt( 0, original.lookAt.y ,0 );
         }
 
         viewGUI.add( parameters, 'autoPlay').name('Auto Play');
@@ -309,7 +301,7 @@ class ThreeHelper {
         this.object.rotation.y = (this.originalRotation + 180) * Math.PI / 180;
         camera.position.set( this.originalCamera.position.x, this.originalCamera.position.y, this.originalCamera.position.z );
         camera.rotation.set( this.originalCamera.rotation.x, this.originalCamera.rotation.y, this.originalCamera.rotation.z )
-        camera.lookAt( 0, this.originalCamera.lookAt.y ,0 );
+        camera.lookAt( this.originalCamera.lookAt.x, this.originalCamera.lookAt.y, this.originalCamera.lookAt.z );
     }
 
     save2JSON( parameters ) {
