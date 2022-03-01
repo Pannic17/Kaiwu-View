@@ -167,6 +167,36 @@ class ThreeHelper {
         }
     }
 
+    loadMesh( gltf, roughnessMipmapper, index, _this ) {
+        gltf.scene.traverse( function (child) {
+            index += 1;
+            child.visible = false
+            if (child instanceof THREE.Mesh) {
+                console.log(child.material);
+                // noinspection JSCheckFunctionSignatures
+                roughnessMipmapper.generateMipmaps(child.material);
+                child.castShadow = true;
+                child.receiveShadow = true;
+                child.material.aoIntensity = 0;
+                child.material.aoMap = null;
+                /**
+                 * @function View ARM
+                 * DISCARD -> RECONSTRUCT
+                 * realized in reload
+                 parameters.maps.arm = child.material.aoMap;
+                 let viewMaterial = new THREE.MeshPhongMaterial({
+                                            color: 0x0000ff,
+                                            map: parameters.maps.arm
+                                        })
+                 let viewMesh = new THREE.Mesh(child.geometry, viewMaterial);
+                 scene.add(viewMesh);
+                 */
+                // const mesh = new MeshHelper( child, meshGUI, parameters, index );
+                _this.object.add( child );
+            }
+        })
+    }
+
     initPost( parameters ) {
         let _this = this;
         const renderSetting = {
@@ -279,7 +309,7 @@ class ThreeHelper {
         this.object.rotation.y = (this.originalRotation + 180) * Math.PI / 180;
         camera.position.set( this.originalCamera.position.x, this.originalCamera.position.y, this.originalCamera.position.z );
         camera.rotation.set( this.originalCamera.rotation.x, this.originalCamera.rotation.y, this.originalCamera.rotation.z )
-        camera.lookAt( 0, 2.5 ,0 );
+        camera.lookAt( 0, this.originalCamera.lookAt.y ,0 );
     }
 
     save2JSON( parameters ) {
@@ -378,7 +408,7 @@ const PRESET = {
         },
         "lookAt": {
             "x": 0,
-            "y": 2.5,
+            "y": 0,
             "z": 0
         },
         "focalLength": 45
