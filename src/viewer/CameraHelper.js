@@ -23,7 +23,7 @@ class CameraHelper {
         const camera = new THREE.PerspectiveCamera( 45, window.innerWidth/window.innerHeight, 1, 1000 );
         camera.position.set( parameters.position.x, parameters.position.y, parameters.position.z );
         camera.rotation.set( parameters.rotation.x, parameters.rotation.y, parameters.rotation.z )
-        camera.lookAt( 0, -1.5 ,0 );
+        camera.lookAt( 0, parameters.lookAt.y ,0 );
         camera.setFocalLength( parameters.focalLength );
         return camera;
     }

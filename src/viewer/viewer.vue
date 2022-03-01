@@ -280,8 +280,8 @@ body{
 
 .button{
     position: absolute;
-    width: 40vw;
-    left: 30vw;
+    width: 80vw;
+    left: 10vw;
     display: inline-flex;
     justify-content: space-around;
     align-content: space-around;

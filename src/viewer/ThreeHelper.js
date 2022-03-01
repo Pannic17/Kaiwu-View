@@ -198,7 +198,7 @@ class ThreeHelper {
         let original = parameters.camera;
         let button = {
             'setting': saveSetting,
-            'reset': resetObject,
+            'reset': _this.resetObject,
             'background': changeBackground,
             'rotation': parameters.rotation,
             'url': ''
@@ -209,13 +209,7 @@ class ThreeHelper {
             original = parameters.camera;
             _this.save2JSON( parameters );
         }
-        function resetObject() {
-            parameters.rotation = button.rotation;
-            _this.object.rotation.y = (button.rotation + 180) * Math.PI / 180;
-            camera.position.set( original.position.x, original.position.y, original.position.z );
-            camera.rotation.set( original.rotation.x, original.rotation.y, original.rotation.z )
-            camera.lookAt( 0, -1.5 ,0 );
-        }
+
         function changeBackground() {
             state.background = parameters.bgPath = button.url
         }
@@ -264,7 +258,7 @@ class ThreeHelper {
             _this.object.rotation.y = (button.rotation + 180) * Math.PI / 180;
             camera.position.set( original.position.x, original.position.y, original.position.z );
             camera.rotation.set( original.rotation.x, original.rotation.y, original.rotation.z )
-            camera.lookAt( 0, -1.5 ,0 );
+            camera.lookAt( 0, original.lookAt.y ,0 );
         }
 
         viewGUI.add( parameters, 'autoPlay').name('Auto Play');
@@ -285,7 +279,7 @@ class ThreeHelper {
         this.object.rotation.y = (this.originalRotation + 180) * Math.PI / 180;
         camera.position.set( this.originalCamera.position.x, this.originalCamera.position.y, this.originalCamera.position.z );
         camera.rotation.set( this.originalCamera.rotation.x, this.originalCamera.rotation.y, this.originalCamera.rotation.z )
-        camera.lookAt( 0, -1.5 ,0 );
+        camera.lookAt( 0, 2.5 ,0 );
     }
 
     save2JSON( parameters ) {
@@ -384,7 +378,7 @@ const PRESET = {
         },
         "lookAt": {
             "x": 0,
-            "y": -1.5,
+            "y": 2.5,
             "z": 0
         },
         "focalLength": 45
