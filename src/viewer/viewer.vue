@@ -47,7 +47,7 @@ export default {
         console.log(params)
         const state = reactive({
             loaded: true,
-            background: "/image/shooting_star.jpg"
+            background: "/image/background.png"
         });
 
         function clearAll( parent, child ){
