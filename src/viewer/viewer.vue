@@ -151,7 +151,7 @@ export default {
             //     type = 0
             // }
             if (data.bgPath == null) {
-                state.background = "/image/shooting_star.jpg"
+                state.background = "/image/background.jpg"
             } else {
                 state.background = data.bgPath
             }
