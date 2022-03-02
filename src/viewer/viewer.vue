@@ -151,7 +151,7 @@ export default {
             //     type = 0
             // }
             if (data.bgPath == null) {
-                state.background = "/image/background.jpg"
+                state.background = "/image/background.png"
             } else {
                 state.background = data.bgPath
             }
