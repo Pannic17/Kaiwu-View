@@ -47,7 +47,7 @@ export default {
         console.log(params)
         const state = reactive({
             loaded: true,
-            background: "/image/background.png"
+            background: "/image/background.jpg"
         });
 
         function clearAll( parent, child ){
@@ -151,7 +151,7 @@ export default {
             //     type = 0
             // }
             if (data.bgPath == null) {
-                state.background = "/image/background.png"
+                state.background = "/image/background.jpg"
             } else {
                 state.background = data.bgPath
             }
