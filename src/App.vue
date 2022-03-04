@@ -21,4 +21,11 @@ body{
     margin: 0;
     padding: 0;
 }
+
+input[type="button"], input[type="submit"], input[type="reset"] {
+    -webkit-appearance: none;
+}
+textarea{
+    -webkit-appearance:none;
+}
 </style>

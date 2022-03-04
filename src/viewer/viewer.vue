@@ -11,9 +11,18 @@
         <div class="rect5"></div>
     </div>
     <div class="button">
-        <button id="autoplay" @click="autoplayDisplay">autoplay</button>
-        <button id="switch" @click="switchDisplay">switch</button>
-        <button id="reset" @click="resetObject">reset</button>
+        <div @click="switchDisplay">
+            <img v-if="state.post" src="/image/high.png" alt="" />
+            <img v-else alt="" src="/image/low.png" />
+        </div>
+        <div @click="autoplayDisplay">
+            <img v-if="!state.play" src="/image/play.png" alt="" />
+            <img v-else src="/image/pause.png" alt="" />
+        </div>
+        <div @click="resetObject">
+            <img src="/image/reset.png" alt="" />
+        </div>
+
     </div>
     <div class="overlay" v-if="state.loaded"></div>
     </body>
@@ -47,7 +56,9 @@ export default {
         console.log(params)
         const state = reactive({
             loaded: true,
-            background: "/image/background.jpg"
+            background: "/image/background.jpg",
+            play: false,
+            post: true
         });
 
         function clearAll( parent, child ){
@@ -96,10 +107,12 @@ export default {
         }
 
         function autoplayDisplay() {
+            state.play = !state.play
             three.autoplayDisplay();
         }
 
         function switchDisplay() {
+            state.post = !state.post
             three.switchDisplay();
         }
 
@@ -280,16 +293,47 @@ body{
 
 .button{
     position: absolute;
-    width: 80vw;
-    left: 10vw;
+    width: 90vw;
+    left: 5vw;
     display: inline-flex;
     justify-content: space-around;
     align-content: space-around;
     bottom: 10vw;
     z-index: 5;
+
+    div{
+        margin: 2vw;
+        padding: 0;
+        width: 8vw;
+        height: 8vw;
+        img{
+            width: 8vw;
+            height: 8vw;
+        }
+    }
+
+
     button{
+        -webkit-appearance: none;
         margin: 10px;
         font-size: 20px;
+        border: none;
+        background: transparent;
+        width: 10vw;
+        height: 10vw;
+        img{
+            padding: 0;
+            margin: 0;
+            width: 10vw;
+            height: 10vw;
+        }
     }
+}
+
+input[type="button"], input[type="submit"], input[type="reset"] {
+    -webkit-appearance: none;
+}
+textarea{
+    -webkit-appearance:none;
 }
 </style>

@@ -14,6 +14,7 @@ import {RenderPass} from "three/examples/jsm/postprocessing/RenderPass";
 import {PostHelper} from "./PostHelper";
 import {ShaderPass} from "three/examples/jsm/postprocessing/ShaderPass";
 import {GammaCorrectionShader} from "three/examples/jsm/shaders/GammaCorrectionShader";
+import {Vector3} from "three";
 
 let renderer, composer, scene, camera, canvas, gui;
 
@@ -297,11 +298,14 @@ class ThreeHelper {
     }
 
     resetObject() {
+        this.control.reset();
         this.parameters.rotation = this.originalRotation;
         this.object.rotation.y = (this.originalRotation + 180) * Math.PI / 180;
         camera.position.set( this.originalCamera.position.x, this.originalCamera.position.y, this.originalCamera.position.z );
         camera.rotation.set( this.originalCamera.rotation.x, this.originalCamera.rotation.y, this.originalCamera.rotation.z )
         camera.lookAt( this.originalCamera.lookAt.x, this.originalCamera.lookAt.y, this.originalCamera.lookAt.z );
+        this.control.target = new Vector3( this.originalCamera.lookAt.x, this.originalCamera.lookAt.y, this.originalCamera.lookAt.z )
+        this.control.update();
     }
 
     save2JSON( parameters ) {
