@@ -12,15 +12,15 @@
     </div>
     <div class="button">
         <div @click="switchDisplay">
-            <img v-if="state.post" src="/image/high.png" alt="" />
-            <img v-else alt="" src="/image/low.png" />
+            <img v-if="state.post" src="https://test-1308399957.cos.ap-shanghai.myqcloud.com/miniprogram-static/viewer/viewHD.png" alt="" />
+            <img v-else alt="" src="https://test-1308399957.cos.ap-shanghai.myqcloud.com/miniprogram-static/viewer/viewLQ.png" />
         </div>
         <div @click="autoplayDisplay">
-            <img v-if="!state.play" src="/image/play.png" alt="" />
-            <img v-else src="/image/pause.png" alt="" />
+            <img v-if="!state.play" src="https://test-1308399957.cos.ap-shanghai.myqcloud.com/miniprogram-static/viewer/viewPlay.png" alt="" />
+            <img v-else src="https://test-1308399957.cos.ap-shanghai.myqcloud.com/miniprogram-static/viewer/viewPause.png" alt="" />
         </div>
         <div @click="resetObject">
-            <img src="/image/reset.png" alt="" />
+            <img src="https://test-1308399957.cos.ap-shanghai.myqcloud.com/miniprogram-static/viewer/viewReset.png" alt="" />
         </div>
 
     </div>

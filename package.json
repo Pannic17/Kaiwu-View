@@ -7,10 +7,12 @@
     "serve": "vite preview"
   },
   "dependencies": {
-    "FileSaver": "0.10.0",
+    "@capacitor/android": "^3.4.3",
+    "@capacitor/ios": "^3.4.3",
     "axios": "0.25.0",
     "blob": "^0.1.0",
     "file-saver": "^2.0.5",
+    "FileSaver": "0.10.0",
     "postprocessing": "^6.23.2",
     "sass": "^1.43.4",
     "sass-loader": "^12.3.0",
