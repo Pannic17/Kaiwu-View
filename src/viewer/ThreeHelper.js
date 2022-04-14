@@ -29,6 +29,7 @@ class ThreeHelper {
             gui.close ();
         }
     }
+    this.parameters.enablePostprocessing = state.post;
 
 
 
