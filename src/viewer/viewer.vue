@@ -58,7 +58,7 @@ export default {
             loaded: true,
             background: "/image/background.jpg",
             play: false,
-            post: true
+            post: false
         });
 
         function clearAll( parent, child ){
