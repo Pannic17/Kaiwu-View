@@ -6,7 +6,8 @@
                 "appID": "VGR88V6Q52.cn.kaiwuart.kaiwushuchuang",
                 "paths": [
                     "/#/jump/*",
-                    "/jump/*"
+                    "/jump/*",
+                    "/#/jump"
                 ]
             }
         ]
