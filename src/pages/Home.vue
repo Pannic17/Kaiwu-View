@@ -1,6 +1,6 @@
 <template>
     <body>
-        <h1>开物模型参数管理后台</h1>
+        <h1>开物</h1>
         <img class="logo" src="/image/logo.png" alt="" />
         <div><a href="/model_doc.pdf">具体操作步骤请点击此处下载文档</a> </div>
         <div>
