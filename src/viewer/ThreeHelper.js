@@ -21,6 +21,7 @@ let renderer, composer, scene, camera, canvas, gui;
 class ThreeHelper {
     constructor( parameters, type, state) {
         this.parameters = parameters;
+        parameters.enablePostprocessing = false;
         this.originalCamera = parameters.camera;
         this.originalRotation = parameters.rotation;
         this.initThree( this.parameters, type, state );
@@ -348,7 +349,7 @@ const PRESET = {
     autoPlay: false,
     ambientIntensity: 0.2,
     hdrExposure: 1.0,
-    enablePostprocessing: true,
+    enablePostprocessing: false,
     toneMapping: 'ACESFilmic',
     maps: {
         arm: null,

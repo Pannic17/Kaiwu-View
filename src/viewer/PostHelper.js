@@ -29,11 +29,11 @@ class PostHelper {
         this.aa = this.gui.addFolder('Anti-Aliasing');
         this.initFXAA();
         this.initSMAA();
-        this.composer.addPass( this.initSSAA() );
-        this.composer.addPass( this.initBloom() );
+        // this.composer.addPass( this.initSSAA() );
+        // this.composer.addPass( this.initBloom() );
         this.composer.addPass( this.initSSAO() );
         this.composer.addPass( this.initSSR() );
-        this.composer.addPass( this.initSharp() );
+        // this.composer.addPass( this.initSharp() );
     }
 
 
