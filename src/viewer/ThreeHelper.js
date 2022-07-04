@@ -117,8 +117,8 @@ class ThreeHelper {
                                     roughnessMipmapper.generateMipmaps(child.material);
                                     child.castShadow = true;
                                     child.receiveShadow = true;
-                                    child.material.aoIntensity = 0;
-                                    child.material.aoMap = null;
+//                                     child.material.aoIntensity = 0;
+//                                     child.material.aoMap = null;
                                     /**
                                      * @function View ARM
                                      * DISCARD -> RECONSTRUCT
@@ -395,7 +395,7 @@ const PRESET = {
     "camera": {
         "position": {
             "x": 0,
-            "y": -1,
+            "y": 0,
             "z": -15
         },
         "rotation": {
