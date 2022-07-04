@@ -112,8 +112,8 @@ export default {
         }
 
         function switchDisplay() {
-            state.post = !state.post
-            three.switchDisplay();
+            // state.post = !state.post
+            // three.switchDisplay();
         }
 
         function resetObject() {
