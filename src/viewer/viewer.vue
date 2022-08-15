@@ -11,10 +11,10 @@
         <div class="rect5"></div>
     </div>
     <div class="button">
-        <div @click="switchDisplay">
+        <!--<div @click="switchDisplay">
             <img v-if="state.post" src="https://test-1308399957.cos.ap-shanghai.myqcloud.com/miniprogram-static/viewer/viewHD.png" alt="" />
             <img v-else alt="" src="https://test-1308399957.cos.ap-shanghai.myqcloud.com/miniprogram-static/viewer/viewLQ.png" />
-        </div>
+        </div>-->
         <div @click="autoplayDisplay">
             <img v-if="!state.play" src="https://test-1308399957.cos.ap-shanghai.myqcloud.com/miniprogram-static/viewer/viewPlay.png" alt="" />
             <img v-else src="https://test-1308399957.cos.ap-shanghai.myqcloud.com/miniprogram-static/viewer/viewPause.png" alt="" />
